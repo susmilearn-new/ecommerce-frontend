@@ -1,16 +1,6 @@
-import {
-  Link,
-  useNavigate,
-} from "react-router-dom";
-
-import {
-  useDispatch,
-  useSelector,
-} from "react-redux";
-
-import {
-  logoutUser,
-} from "../redux/thunks/authThunks";
+import { Link, useNavigate } from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {logoutUser} from "../redux/thunks/authThunks";
 
 const Navbar = () => {
   const dispatch =
@@ -39,9 +29,7 @@ const Navbar = () => {
         logoutUser()
       );
 
-      navigate(
-        "/login"
-      );
+      navigate("/login");
     };
 
   return (

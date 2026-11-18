@@ -1,17 +1,8 @@
-import {
-  useSelector,
-  useDispatch,
-} from "react-redux";
+import {useSelector, useDispatch } from "react-redux";
 
-import {
-  removeFromCart,
-  increaseQuantity,
-  decreaseQuantity,
-} from "../redux/slices/cartSlice";
+import {removeFromCart, increaseQuantity, decreaseQuantity } from "../redux/slices/cartSlice";
 
-import {
-  Link,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const dispatch =
@@ -71,12 +62,7 @@ const Cart = () => {
                   {item.name}
                 </h2>
 
-                <p>
-                  ₹
-                  {
-                    item.price
-                  }
-                </p>
+                <p>₹{item.price}</p>
               </div>
 
               <div className="flex items-center gap-3">

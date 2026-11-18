@@ -28,6 +28,7 @@ import Orders from "./pages/Orders";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Checkout from "./pages/Checkout";
 
 const App = () => {
   const dispatch =
@@ -85,6 +86,15 @@ const App = () => {
           />
 
           <Route
+          path="/checkout"
+          element={
+            <ProtectedRoute>
+              <Checkout />
+            </ProtectedRoute>
+          }
+        />
+
+          <Route
             path="/orders"
             element={
               <ProtectedRoute>
@@ -93,6 +103,7 @@ const App = () => {
             }
           />
         </Routes>
+        
       </main>
 
       <Footer />
